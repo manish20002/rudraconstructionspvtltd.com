@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const companyProfileUrl = `${import.meta.env.BASE_URL}company/companyprofile_rudhra_construtions.pdf`
+</script>
+
 <template>
   <section class="bg-slate-950 py-20 text-white">
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -128,7 +132,7 @@
           </div>
 
           <a
-            href="company/companyprofile_rudhra_construtions.pdf"
+            :href="companyProfileUrl"
             download
             class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-amber-300 to-orange-400 px-6 py-3 text-sm font-extrabold text-slate-900 shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5"
           >
