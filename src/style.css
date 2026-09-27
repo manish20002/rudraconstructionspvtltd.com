@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+  background: #fffdf9;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --brand-gold: #e9b45c;
+  --brand-gold-deep: #b9772d;
+  --brand-slate: #1f2937;
+  --brand-slate-soft: #374151;
+  --brand-cream: #fffaf0;
+  --brand-ivory: #f5f1e8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(233, 180, 92, 0.12), transparent 18%),
+    radial-gradient(circle at bottom right, rgba(31, 41, 55, 0.04), transparent 20%),
+    linear-gradient(180deg, #fffefb 0%, #f7f3eb 100%);
+  color: var(--brand-slate);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(233, 180, 92, 0.24);
+  color: var(--brand-slate);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+html, body, #app {
+  min-height: 100%;
+}
+
+.dark-theme .bg-white,
+.dark-theme .bg-slate-100,
+.dark-theme .bg-slate-50 {
+  background-color: #111827 !important;
+}
+
+.dark-theme .text-slate-900,
+.dark-theme .text-slate-700,
+.dark-theme .text-slate-600,
+.dark-theme .text-slate-800,
+.dark-theme .text-slate-500 {
+  color: #f8fafc !important;
+}
+
+.dark-theme .border-slate-200,
+.dark-theme .border-stone-200 {
+  border-color: rgba(148, 163, 184, 0.22) !important;
+}
+
+.dark-theme .shadow-\[0_18px_40px_rgba\(15\,23\,42\,0\.06\)\],
+.dark-theme .shadow-\[0_20px_50px_rgba\(15\,23\,42\,0\.06\)\],
+.dark-theme .shadow-\[0_10px_30px_rgba\(15\,23\,42\,0\.04\)\] {
+  box-shadow: none !important;
+}
