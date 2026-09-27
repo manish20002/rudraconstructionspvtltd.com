@@ -7,15 +7,15 @@
     <script>
       const repoBase = '/rudraconstructionspvtltd.com';
       const currentPath = window.location.pathname;
+      const routePath = currentPath.startsWith(repoBase)
+        ? currentPath.slice(repoBase.length) || '/'
+        : currentPath;
 
-      if (currentPath === repoBase || currentPath === repoBase + '/') {
+      if (routePath === '/' || routePath === '') {
         window.location.replace(repoBase + '/');
       } else {
-        const redirectPath = currentPath.startsWith(repoBase)
-          ? currentPath.replace(repoBase, repoBase)
-          : repoBase + currentPath;
-
-        window.location.replace(redirectPath);
+        const redirect = encodeURIComponent(routePath);
+        window.location.replace(repoBase + '/?redirect=' + redirect);
       }
     </script>
   </head>

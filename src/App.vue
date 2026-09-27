@@ -1,8 +1,22 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const navOpen = ref(false)
 const isDark = ref(false)
+
+onMounted(() => {
+  const params = new URLSearchParams(window.location.search)
+  const redirect = params.get('redirect')
+
+  if (redirect && redirect.startsWith('/')) {
+    router.replace(redirect)
+    const url = new URL(window.location.href)
+    url.searchParams.delete('redirect')
+    window.history.replaceState({}, '', url)
+  }
+})
 
 const navItems = [
   { label: 'Home', to: '/' },
