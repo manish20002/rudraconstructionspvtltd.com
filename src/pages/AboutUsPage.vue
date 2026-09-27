@@ -128,7 +128,7 @@
           </div>
 
           <a
-            href="/company/companyprofile_rudhra_construtions.pdf"
+            href="company/companyprofile_rudhra_construtions.pdf"
             download
             class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-amber-300 to-orange-400 px-6 py-3 text-sm font-extrabold text-slate-900 shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5"
           >
